@@ -1,0 +1,112 @@
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-top: 50px;
+            align-items: start;
+        }
+
+        /* Linkerkant: Grote Social Media Icons */
+        .social-big-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-card i {
+            font-size: 3rem;
+            color: var(--neon-blue);
+        }
+
+        .social-card span {
+            color: var(--text-main);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 242, 255, 0.05);
+            border-color: var(--neon-blue);
+            box-shadow: 0 10px 20px rgba(0, 242, 255, 0.1);
+        }
+
+        /* Rechterkant: Mail Formulier */
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(188, 19, 254, 0.1);
+        }
+
+        .contact-form-wrapper h2 {
+            color: var(--neon-purple);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--neon-purple);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--neon-purple);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 900px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    

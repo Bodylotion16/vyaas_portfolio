@@ -1,0 +1,454 @@
+:root {
+    --bg-dark: #050505;
+    --neon-blue: #00f2ff;
+    --neon-purple: #bc13fe;
+    --text-main: #e0e0e0;
+    --text-muted: #999;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --icon-hover: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Background Animation */
+.bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%);
+}
+
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(var(--neon-blue), var(--neon-purple));
+    filter: blur(160px);
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: float 20s infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translate(-10%, -10%);
+    }
+    to {
+        transform: translate(10%, 10%);
+    }
+}
+
+/* Header & Nav */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px var(--neon-blue);
+    text-decoration: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* Main Content */
+main {
+    padding: 120px 8% 50px; /* Aangepaste padding voor betere uitlijning */
+    min-height: 90vh;
+}
+
+/* --- HOME HERO SECTION --- */
+.home-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-text {
+    flex: 1; /* Neemt de linker helft in */
+    padding-right: 50px;
+}
+
+.hero-text h1 {
+    font-size: clamp(3rem, 8vw, 5rem); /* Verkleinde, flexibele grootte */
+    line-height: 0.9;
+    background: linear-gradient(to bottom, #fff, var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    flex: 1; /* Neemt de rechter helft in */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px; /* Ronde hoeken */
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.hero-image img:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 60px rgba(188, 19, 254, 0.3);
+}
+
+/* --- REVEAL ANIMATION --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Title (voor andere pagina's) */
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/* Footer & Icons */
+footer {
+    padding: 60px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Ruimte tussen de iconen */
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    font-size: 2rem; /* Grotere iconen */
+    color: var(--text-main);
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: var(--neon-purple);
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.copy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-purple);
+}
+/* =========================================
+   MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Algemene layout naar één kolom */
+    .home-hero, 
+    .about-container, 
+    .skills-container, 
+    .contact-container,
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* 2. Header menu aanpassen */
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    /* 3. Tekst groottes optimaliseren voor mobiel */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem !important;
+    }
+
+    /* 4. Foto's centreren en schalen */
+    .hero-image, .neon-image-wrapper {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto;
+    }
+
+    .music-photos, .skills-visuals, .social-big-grid {
+        grid-template-columns: 1fr !important; /* Alles onder elkaar */
+        width: 100%;
+    }
+
+    .music-photos img, .skills-visuals img, .project-image img {
+        height: 250px !important;
+    }
+
+    /* 5. Specifieke fixes voor tekstblokken */
+    .hero-tagline, .music-story {
+        border-left: none !important;
+        border-bottom: 2px solid var(--neon-purple);
+        padding-left: 0 !important;
+        padding-bottom: 20px;
+    }
+
+    .info-list {
+        text-align: left;
+        display: inline-block;
+    }
+}
+.big-clock {
+    font-size: 1.5rem; /* Maakt de tijd groter */
+    color: var(--neon-purple);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--neon-purple); /* Geeft het een mooie glow */
+}
+.bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #050505; /* Diepzwarte basis */
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    filter: blur(80px);
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: move 20s infinite alternate;
+}
+
+@keyframes move {
+    from { transform: translate(-10%, -10%); }
+    to { transform: translate(100%, 80%); }
+}
+body {
+    background: linear-gradient(-45deg, #050505, #0a0a0a, #001a1d, #12001a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* De basis: Pikzwart voor maximaal contrast */
+.bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #020202; /* Extreem zwart */
+    overflow: hidden;
+}
+
+/* We maken meerdere blobs voor een gelaagd effect */
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25; /* Iets sterker voor meer effect */
+    animation: float 25s infinite alternate ease-in-out;
+}
+
+/* Blob 1: Jouw Neon Blauw */
+.blob-1 {
+    background: var(--neon-blue);
+    top: -10%;
+    left: -10%;
+    animation-duration: 30s;
+}
+
+/* Blob 2: Jouw Neon Paars */
+.blob-2 {
+    background: var(--neon-purple);
+    bottom: -10%;
+    right: -10%;
+    animation-duration: 25s;
+    animation-delay: -5s;
+}
+
+/* Blob 3: Een mix voor in het midden */
+.blob-3 {
+    background: linear-gradient(var(--neon-blue), var(--neon-purple));
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+    animation-duration: 35s;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30vw, 20vh) scale(1.1); }
+    66% { transform: translate(-10vw, 50vh) scale(0.9); }
+    100% { transform: translate(10vw, -10vh) scale(1); }
+}
+/* =========================================
+   ULTIEME MOBIELE REPARATIE
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* Fix voor de Index (Home) */
+    .home-hero {
+        flex-direction: column-reverse !important; /* Foto boven, tekst onder */
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .hero-image {
+        width: 250px !important;
+        height: 250px !important;
+        margin: 0 auto 30px;
+    }
+
+    /* Fix voor Over Mij & Skills containers */
+    .about-container, 
+    .skills-top-section, 
+    .skills-container,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important; /* Alles netjes onder elkaar */
+        gap: 30px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Foto's op mobiel centreren */
+    .music-photos, .skills-visuals-side, .skills-visuals {
+        width: 100% !important;
+        order: 2; /* Zet foto's onder de tekst */
+    }
+
+    .music-photos img, .skills-visuals img, .skills-visuals-side img {
+        width: 100% !important;
+        max-height: 400px;
+    }
+
+    /* Tekst aanpassingen voor leesbaarheid */
+    h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .skill-group {
+        border-left: 2px solid var(--neon-purple);
+        padding: 15px !important;
+        margin-bottom: 15px;
+    }
+
+    /* Navigatie menu mobiel */
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+}
