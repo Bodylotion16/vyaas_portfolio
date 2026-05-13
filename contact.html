@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyaas Kalloe | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-top: 50px;
+            align-items: start;
+        }
+
+        /* Linkerkant: Grote Social Media Icons */
+        .social-big-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-card i {
+            font-size: 3rem;
+            color: var(--neon-blue);
+        }
+
+        .social-card span {
+            color: var(--text-main);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 242, 255, 0.05);
+            border-color: var(--neon-blue);
+            box-shadow: 0 10px 20px rgba(0, 242, 255, 0.1);
+        }
+
+        /* Rechterkant: Mail Formulier */
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(188, 19, 254, 0.1);
+        }
+
+        .contact-form-wrapper h2 {
+            color: var(--neon-purple);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--neon-purple);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--neon-purple);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 900px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-wrapper">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+    <div class="bg-wrapper"><div class="blob"></div></div>
+
+    <header>
+        <a href="index.html" class="logo">VK</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="over-mij.html">Over Mij</a>
+            <a href="skills.html">Skills</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reveal active">
+            <h1 style="font-size: 3.5rem; color: var(--neon-blue); margin-bottom: 40px;">Let's Connect</h1>
+
+            <div class="contact-container">
+                
+                <div class="social-big-grid">
+                    <a href="https://wa.me/5978859238" target="_blank" class="social-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/k_vyaas._" target="_blank" class="social-card">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/share/1XrjtdpBg2/" target="_blank" class="social-card">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/@vyaas_kalloe" target="_blank" class="social-card">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Stuur een bericht</h2>
+                    <form action="https://formsubmit.co/vyaaskalloe2@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label>Naam</label>
+                            <input type="text" name="name" placeholder="Jouw naam" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Adres</label>
+                            <input type="email" name="email" placeholder="jouw@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Bericht</label>
+                            <textarea name="message" rows="5" placeholder="Wat kan ik voor je doen?" required></textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="https://jouwwebsite.com/thanks.html">
+                        <button type="submit" class="submit-btn">Verstuur Mail</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copy">&copy; <span id="year"></span> Vyaas Kalloe | Altijd bereikbaar.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

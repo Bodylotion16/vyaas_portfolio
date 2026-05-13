@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Vyaas Kalloe | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-wrapper">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+
+    <div class="bg-wrapper">
+        <div class="blob"></div>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">VK</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="over-mij.html">Over Mij</a>
+            <a href="skills.html">Skills</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero reveal active">
+            <div class="hero-text">
+                <span style="color: var(--neon-blue); letter-spacing: 4px; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Paramaribo, Suriname
+                    <span id="live-time" style="margin-left: 15px; color: var(--neon-purple); border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;"></span>
+                </span>
+                
+                <h1>VYAAS<br>KALLOE</h1>
+                
+                <div id="animate-tagline" class="hero-tagline" style="font-size: 1.1rem; line-height: 1.6; border-left: 2px solid var(--neon-purple); padding-left: 20px; margin-bottom: 30px; min-height: 3.2em;">
+                    "20 jaar, gedreven door de precisie van datacenters en de passie van muziek. Vanuit Paramaribo verbind ik complexe netwerken met creatievere ritmes, altijd op zoek naar groei."
+                </div>
+                
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">Networking</span>
+                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">ICT</span>
+                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">Datacenter Tech</span>
+                    
+                    <span style="padding: 6px 16px; border: 1px solid rgba(188, 19, 254, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-purple); text-transform: uppercase; letter-spacing: 1px;">Audio Design</span>
+                    <span style="padding: 6px 16px; border: 1px solid rgba(188, 19, 254, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-purple); text-transform: uppercase; letter-spacing: 1px;">Musician</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="img/homepage-profiel.jpeg" alt="Vyaas Kalloe Profielfoto">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/share/1XrjtdpBg2/?mibextid=wwXIfr" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/k_vyaas._?igsh=bml5YmZqMnh1cWR2&utm_source=qr" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vyaas.kalloe1?_r=1&_t=ZS-95vjXOtB9jo" target="_blank" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@vyaas_kalloe?si=Knm1jpjvy8adYta2" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5978859238" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="copy">&copy; <span id="year"></span> Vyaas Kalloe | Een sprong in de toekomst.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                const revealPoint = 150;
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
