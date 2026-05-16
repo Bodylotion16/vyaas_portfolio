@@ -74,4 +74,14 @@
         @media (max-width: 1024px) {
             .project-card { grid-template-columns: 1fr; }
         }
-    
+    /* Styling voor de portfolio introductie sectie */
+.portfolio-title {
+    font-size: 3.5rem;
+    color: var(--neon-blue);
+    margin-bottom: 10px;
+}
+
+.portfolio-subtitle {
+    margin-bottom: 50px;
+    opacity: 0.7;
+}

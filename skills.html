@@ -4,109 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vyaas Kalloe | Skills</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/skills.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght::400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-    .skills-container {
-        display: grid;
-        grid-template-columns: 1fr 1.8fr;
-        gap: 40px;
-        margin-top: 30px;
-        align-items: start;
-    }
-
-    /* Linkerkant: Foto's met behoud van verhouding */
-    .skills-visuals {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .skills-visuals img {
-        width: 100%;
-        height: auto; /* Laat de foto zijn natuurlijke vorm houden */
-        max-height: 500px; /* Voorkomt dat ze té lang worden */
-        object-fit: cover;
-        border-radius: 12px;
-        border: 2px solid var(--neon-blue);
-        box-shadow: 0 5px 15px rgba(0, 242, 255, 0.2);
-        transition: all 0.3s ease;
-    }
-
-    .skills-visuals img:hover {
-        transform: scale(1.03);
-        border-color: var(--neon-purple);
-        box-shadow: 0 0 25px rgba(188, 19, 254, 0.4);
-    }
-
-    /* Rechterkant styling blijft hetzelfde maar met betere uitlijning */
-    .skills-content h2 {
-        font-size: 2.5rem;
-        color: var(--neon-blue);
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-    }
-
-    .skill-group {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.02);
-        border-left: 4px solid var(--neon-purple);
-        border-radius: 0 15px 15px 0;
-    }
-
-    .skill-group h3 {
-        font-size: 1.3rem;
-        color: var(--neon-purple);
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .skill-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        list-style: none;
-    }
-
-    .skill-list li {
-        font-size: 1.05rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-main);
-        padding: 5px 0;
-    }
-
-    .skill-list li i {
-        color: var(--neon-blue);
-        font-size: 0.8rem;
-    }
-
-    /* Mobiele fix: Foto's onder elkaar */
-    @media (max-width: 1024px) {
-        .skills-container { 
-            grid-template-columns: 1fr; 
-        }
-        .skills-visuals {
-            order: 2; /* Foto's onder de tekst op mobiel */
-        }
-    }
-</style>
 </head>
 <body>
     <div class="bg-wrapper">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-</div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-    <div class="bg-wrapper"><div class="blob"></div></div>
+    <div class="bg-wrapper secondary-wrapper">
+        <div class="blob"></div>
+    </div>
 
     <header>
         <a href="index.html" class="logo">VK</a>
@@ -147,7 +59,7 @@
                     <h3><i class="fas fa-code"></i> Software & Development</h3>
                     <ul class="skill-list">
                         <li><i class="fas fa-check"></i> Websitebeheer met WordPress en XAMPP (PHP, MySQL) </li>
-                        <li><i class="fas fa-check"></i> Servicedeskbeheer (o.a. Spiceworks) [cite: 12]</li>
+                        <li><i class="fas fa-check"></i> Servicedeskbeheer (o.a. Spiceworks) </li>
                         <li><i class="fas fa-check"></i> Office-producten: Word, Excel, PowerPoint, Sharepoint, Teams, Publisher </li>
                         <li><i class="fas fa-check"></i> Projectplanning en documentatie </li>
                         <li><i class="fas fa-check"></i> Grafisch ontwerp (Canva, Filmora) </li>
@@ -188,9 +100,6 @@
         <p class="copy">&copy; <span id="year"></span> Vyaas Kalloe | All Skills Integrated.</p>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
     <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -452,3 +452,54 @@ body {
         padding: 5px 8px;
     }
 }
+.contact-location{
+    color: var(--neon-blue); letter-spacing: 4px; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; display: flex; align-items: center; margin-bottom: 15px;
+}
+/* Locatie en Tijd styling */
+.contact-location i {
+    margin-right: 10px;
+}
+
+.live-time-badge {
+    margin-left: 15px;
+    color: var(--neon-purple);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 15px;
+}
+
+/* Tagline styling */
+.hero-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-left: 2px solid var(--neon-purple);
+    padding-left: 20px;
+    margin-bottom: 30px;
+    min-height: 3.2em;
+}
+
+/* Badges container */
+.hero-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Badge basis styling */
+.badge {
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge-blue {
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    color: var(--neon-blue);
+}
+
+.badge-purple {
+    border: 1px solid rgba(188, 19, 254, 0.3);
+    color: var(--neon-purple);
+}

@@ -109,4 +109,9 @@
         @media (max-width: 900px) {
             .contact-container { grid-template-columns: 1fr; }
         }
-    
+    /* Styling voor de hoofdknop/titel van de contactpagina */
+.contact-title {
+    font-size: 3.5rem;
+    color: var(--neon-blue);
+    margin-bottom: 40px;
+}

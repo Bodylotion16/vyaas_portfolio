@@ -4,79 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vyaas Kalloe | Over Mij</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/over-mij.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-       <style>
-    /* Forceer de indeling: kolom 1 en 2 zijn smal, kolom 3 (foto's) is heel breed */
-    .about-container {
-        display: grid;
-        grid-template-columns: 0.8fr 0.8fr 2fr; /* Foto's krijgen nu 2x zoveel ruimte als de tekst */
-        gap: 20px; 
-        margin-top: 50px;
-        align-items: start;
-    }
-
-    /* Persoonlijke info (Links) */
-    .personal-info h2 {
-        font-size: 2.2rem;
-        color: var(--neon-blue);
-        margin-bottom: 15px;
-    }
-   .info-list {
-        list-style: none;
-        font-size: 1.25rem;
-        line-height: 2.8; /* Verhoogd voor meer lengte */
-        font-weight: 700;
-    }
-    .info-list span {
-        color: var(--neon-purple);
-    }
-
-    /* Muziek verhaal (Midden) - Schuift nu hard naar links */
-    .music-story {
-        padding-top: 10px;
-    }
-    .music-story h3 {
-        color: var(--neon-purple);
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-    }
-    .music-story p {
-        font-size: 1.1rem;
-        line-height: 1.9; /* Iets ruimer */
-        opacity: 0.9;
-        margin-bottom: 25px; /* Meer ruimte tussen paragrafen */
-    }
-    /* Foto grid (Rechts) - Nu echt groot */
-    .music-photos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .music-photos img {
-        width: 100%;
-        height: 280px; /* Nog hoger voor meer impact */
-        object-fit: cover;
-        border-radius: 15px;
-        border: 2px solid rgba(0, 242, 255, 0.2);
-        transition: 0.4s ease-in-out;
-    }
     
-    .music-photos img:hover {
-        transform: scale(1.03);
-        border-color: var(--neon-blue);
-        box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
-    }
-
-    /* Mobiele fix */
-    @media (max-width: 1100px) {
-        .about-container {
-            grid-template-columns: 1fr;
-        }
-    }
-       </style>
 </head>
 <body>
 <div class="bg-wrapper">

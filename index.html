@@ -10,13 +10,9 @@
 </head>
 <body>
     <div class="bg-wrapper">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-</div>
-
-    <div class="bg-wrapper">
-        <div class="blob"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
 
     <header>
@@ -33,24 +29,23 @@
     <main>
         <section class="home-hero reveal active">
             <div class="hero-text">
-                <span style="color: var(--neon-blue); letter-spacing: 4px; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; display: flex; align-items: center; margin-bottom: 15px;">
-                    <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Paramaribo, Suriname
-                    <span id="live-time" style="margin-left: 15px; color: var(--neon-purple); border-left: 1px solid rgba(255,255,255,0.2); padding-left: 15px;"></span>
+                <span class="contact-location">
+                    <i class="fas fa-map-marker-alt"></i> Paramaribo, Suriname
+                    <span id="live-time" class="live-time-badge"></span>
                 </span>
                 
                 <h1>VYAAS<br>KALLOE</h1>
                 
-                <div id="animate-tagline" class="hero-tagline" style="font-size: 1.1rem; line-height: 1.6; border-left: 2px solid var(--neon-purple); padding-left: 20px; margin-bottom: 30px; min-height: 3.2em;">
+                <div id="animate-tagline" class="hero-tagline">
                     "20 jaar, gedreven door de precisie van datacenters en de passie van muziek. Vanuit Paramaribo verbind ik complexe netwerken met creatievere ritmes, altijd op zoek naar groei."
                 </div>
                 
-                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
-                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">Networking</span>
-                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">ICT</span>
-                    <span style="padding: 6px 16px; border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px;">Datacenter Tech</span>
-                    
-                    <span style="padding: 6px 16px; border: 1px solid rgba(188, 19, 254, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-purple); text-transform: uppercase; letter-spacing: 1px;">Audio Design</span>
-                    <span style="padding: 6px 16px; border: 1px solid rgba(188, 19, 254, 0.3); border-radius: 4px; font-size: 0.7rem; color: var(--neon-purple); text-transform: uppercase; letter-spacing: 1px;">Musician</span>
+                <div class="hero-badges">
+                    <span class="badge badge-blue">Networking</span>
+                    <span class="badge badge-blue">ICT</span>
+                    <span class="badge badge-blue">Datacenter Tech</span>
+                    <span class="badge badge-purple">Audio Design</span>
+                    <span class="badge badge-purple">Musician</span>
                 </div>
             </div>
             
@@ -72,20 +67,5 @@
     </footer>
 
     <script src="js/script.js" defer></script>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        window.addEventListener('scroll', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(reveal => {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveal.getBoundingClientRect().top;
-                const revealPoint = 150;
-                if (revealTop < windowHeight - revealPoint) {
-                    reveal.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
