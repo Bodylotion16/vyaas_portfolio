@@ -503,3 +503,4 @@ body {
     border: 1px solid rgba(188, 19, 254, 0.3);
     color: var(--neon-purple);
 }
+@import url("profiles/js/script.js"); 
